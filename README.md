@@ -18,7 +18,7 @@ optimization with `EXPLAIN`. Material developed during the *Databases* course
 
 The course's final project — the complete design of an **online bank** (schema,
 indexes, business queries and documentation) — lives in its own repository:
-[banca-online-sql](https://github.com/Criscarr26/banca-online-sql).
+[online-banking-sql](https://github.com/Criscarr26/online-banking-sql).
 
 ## Usage
 
