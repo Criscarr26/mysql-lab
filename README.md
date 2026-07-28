@@ -1,47 +1,46 @@
 # MySQL Lab
 
-Colección de prácticas de MySQL organizadas por tema, desde el diseño de esquemas
-hasta la optimización de consultas con `EXPLAIN`. Material desarrollado durante la
-asignatura de *Base de Datos* (ITLA), consolidado y corregido para que cada script
-sea ejecutable de principio a fin en MySQL 8+.
+Collection of MySQL exercises organized by topic, from schema design to query
+optimization with `EXPLAIN`. Material developed during the *Databases* course
+(ITLA), consolidated and corrected so that each script runs end to end on MySQL 8+.
 
-## Contenido
+## Contents
 
-| Módulo | Tema | Destacado |
+| Module | Topic | Highlight |
 |---|---|---|
-| [01-fundamentos](01-fundamentos/) | Diseño de esquemas y DDL | Relaciones N:M con tablas intermedias (universidad, tienda, gestión académica) |
-| [02-ejercicios](02-ejercicios/) | Ejercicios guiados (SQLya) | Creación de tablas, claves primarias, inserts y casos de error |
-| [03-normalizacion](03-normalizacion/) | Normalización 1FN → 3FN | De una tabla "ancha" de ventas a un esquema normalizado con FKs |
-| [04-consultas-avanzadas](04-consultas-avanzadas/) | SQL avanzado | Subconsultas, funciones de ventana, CTEs recursivas, operaciones de conjuntos, transacciones con ROLLBACK condicional |
-| [05-optimizacion](05-optimizacion/) | Rendimiento | Antes/después con `EXPLAIN`: índices y predicados sargables (`BETWEEN` en vez de `YEAR()`) |
+| [01-fundamentos](01-fundamentos/) | Schema design and DDL | N:M relationships with junction tables (university, store, academic management) |
+| [02-ejercicios](02-ejercicios/) | Guided exercises (SQLya) | Table creation, primary keys, inserts and error cases |
+| [03-normalizacion](03-normalizacion/) | Normalization 1NF → 3NF | From a "wide" sales table to a normalized schema with FKs |
+| [04-consultas-avanzadas](04-consultas-avanzadas/) | Advanced SQL | Subqueries, window functions, recursive CTEs, set operations, transactions with conditional ROLLBACK |
+| [05-optimizacion](05-optimizacion/) | Performance | Before/after with `EXPLAIN`: indexes and sargable predicates (`BETWEEN` instead of `YEAR()`) |
 
-## Proyecto final relacionado
+## Related final project
 
-El proyecto final de la asignatura — el diseño completo de una **banca en línea**
-(esquema, índices, consultas de negocio y documentación) — está en su propio
-repositorio: [banca-online-sql](https://github.com/Criscarr26/banca-online-sql).
+The course's final project — the complete design of an **online bank** (schema,
+indexes, business queries and documentation) — lives in its own repository:
+[banca-online-sql](https://github.com/Criscarr26/banca-online-sql).
 
-## Uso
+## Usage
 
-Cada script es independiente y crea su propia base de datos:
+Each script is self-contained and creates its own database:
 
 ```sql
--- En MySQL Workbench o el cliente mysql:
+-- In MySQL Workbench or the mysql client:
 SOURCE 04-consultas-avanzadas/consultas-avanzadas.sql;
 ```
 
-## Temas cubiertos
+## Topics covered
 
-- DDL: tablas, claves primarias y foráneas, `AUTO_INCREMENT`, acciones en cascada
-- Relaciones 1:N y N:M con tablas intermedias
-- Normalización y eliminación de redundancia
-- `JOIN`, agregaciones, `GROUP BY` / `HAVING`
-- Subconsultas y CTEs (incluida una CTE recursiva)
-- Funciones de ventana: `ROW_NUMBER`, `SUM() OVER`, `LAG`
-- `UNION` y equivalentes de `INTERSECT` / `EXCEPT` con `EXISTS`
-- Transacciones (`START TRANSACTION`, `COMMIT`, `ROLLBACK`), procedimientos y `LOCK TABLES`
-- Índices y análisis de planes de ejecución con `EXPLAIN`
+- DDL: tables, primary and foreign keys, `AUTO_INCREMENT`, cascading actions
+- 1:N and N:M relationships with junction tables
+- Normalization and redundancy removal
+- `JOIN`, aggregations, `GROUP BY` / `HAVING`
+- Subqueries and CTEs (including a recursive CTE)
+- Window functions: `ROW_NUMBER`, `SUM() OVER`, `LAG`
+- `UNION` and `INTERSECT` / `EXCEPT` equivalents with `EXISTS`
+- Transactions (`START TRANSACTION`, `COMMIT`, `ROLLBACK`), procedures and `LOCK TABLES`
+- Indexes and execution-plan analysis with `EXPLAIN`
 
-## Licencia
+## License
 
 [MIT](LICENSE)
